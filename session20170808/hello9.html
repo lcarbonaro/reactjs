@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="root" class="container"></div>
+
+    <script type="text/babel">
+
+        // fetching data from an external API
+        // also, an example of composability 
+
+        class ListItem extends React.Component {
+
+            render() {
+
+                // note textTransform not text-transform (camelCase)
+
+                const styling = {
+                    textTransform: "capitalize"
+                };
+
+                return (
+                    <li style={styling} className="collection-item avatar">
+                        <img src={this.props.pic} className="circle"/>
+                        <p> {this.props.name}<br/>{this.props.city} </p>
+                    </li>
+                );
+            }
+
+        }
+
+        class List extends React.Component {
+
+            constructor(props) {
+                super(props);
+                this.state = {
+                    listItems: []
+                };
+            }
+
+            // note use of componemnt lifecycle method componentDidMount()
+
+            componentDidMount() {
+
+                fetch('https://randomuser.me/api/?inc=name,picture,location&results=10')
+                .then( (resp) => resp.json() )
+                .then( (data) => {
+                    this.setState({ listItems: data.results });
+                });
+
+            }
+
+            render() {
+
+                // note use of JavaScript map() function
+
+                return (
+                    <ul className="collection">
+                        {this.state.listItems.map((item, index) => (
+                            <ListItem name={item.name.first + ' ' + item.name.last} pic={item.picture.thumbnail} city={item.location.city}  />
+                        ))}
+                    </ul>
+                );
+
+            }
+        }
+
+        ReactDOM.render(
+            <List />,
+            document.getElementById('root')
+        );
+
+    </script>
+</body>
+
+</html>

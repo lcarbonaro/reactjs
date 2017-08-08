@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+    
+        // reusability example
+
+        class Hello extends React.Component {
+
+            render() {
+                return (
+                    <h1>Hello, world! says {this.props.from} </h1>
+                );
+            }
+        }
+
+        // note 1st argument must always be one element
+        ReactDOM.render(
+            <div>
+                <Hello from="Fred" />
+                <Hello from="Jill" />
+            </div>,
+            document.getElementById('root')
+        );
+
+    </script>
+</body>
+
+</html>

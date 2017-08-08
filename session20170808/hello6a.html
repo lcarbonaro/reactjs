@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        .myHdg {
+            color: blue;
+            background-color: red
+        }
+
+    </style>
+
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        // styling with usual style rules or CSS 'classes'
+
+        class Hello extends React.Component {
+
+            render() {
+
+                // note className in JSX, not class
+
+                return (
+                    <h1 className="myHdg" >Hello, world! says {this.props.from} </h1>
+                );
+            }
+        }
+
+        class Greetings extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <Hello from="Fred" />
+                        <Hello from="Jill" />
+                    </div>
+                );
+            }
+        }
+
+
+        ReactDOM.render(
+            <Greetings />,
+            document.getElementById('root')
+        );
+
+    </script>
+</body>
+
+</html>
