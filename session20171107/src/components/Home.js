@@ -14,6 +14,6 @@ class Home extends React.Component {
 
 // more compact, but more cryptic way
 // use for stateless components
-const Home = () => (<h3>test 1</h3>);
+const Home = () => (<h3>Home</h3>);
 
 export default Home;

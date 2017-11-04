@@ -4,7 +4,7 @@ class About extends React.Component {
 
     render() {
         return (
-            <h3>test about</h3>
+            <h3>About</h3>
         )
     }
 }
