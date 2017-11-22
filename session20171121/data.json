@@ -1,0 +1,13 @@
+{
+  "ids": {
+    "todo-item": 5
+  },
+  "models": {
+    "todo-item": {
+      "1": "{\"key\":1,\"text\":\"do something\",\"id\":1}",
+      "2": "{\"key\":1511211191448,\"text\":\"do something else\",\"id\":2}",
+      "3": "{\"key\":1511211765453,\"text\":\"test 3\",\"id\":3}",
+      "4": "{\"key\":1511275825553,\"text\":\"test again\",\"id\":4}"
+    }
+  }
+}
