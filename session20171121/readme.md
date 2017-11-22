@@ -14,10 +14,13 @@ Usage Steps:
 9. `node .`
 
 Application runs on localhost:3000
+
 API explorer runs on localhost:3000/explorer
+
+
 
 References:
 - [ReactJS](https://reactjs.org/)
-- [LoopBack](http://loopback.io/)
-- [Loopback static page](https://loopback.io/doc/en/lb3/Add-a-static-web-page.html)
+- [LoopBack docs](http://loopback.io/)
+- [LoopBack static page](https://loopback.io/doc/en/lb3/Add-a-static-web-page.html)
 - [What's new in ES6?](http://es6-features.org) 
