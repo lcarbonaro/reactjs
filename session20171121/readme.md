@@ -14,7 +14,7 @@ Usage Steps:
 9. `node .`
 
 Application runs on localhost:3000
-
+API explorer runs on localhost:3000/explorer
 
 References:
 - [ReactJS](https://reactjs.org/)
