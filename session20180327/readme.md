@@ -4,7 +4,7 @@ ReactJS - Using NextJS
 Usage Steps:
 
 1. download or `git clone` to new-project-folder
-2. `cd` to new-project-folder
+2. `cd` to new-project-folder/session20180327
 3. `npm install` 
 4. `npm run dev`
 
