@@ -1,6 +1,8 @@
 ReactJS - Using NextJS
 ------------------------
 
+This example will build something like [this](https://mar27-take4.now.sh).  
+
 Usage Steps:
 
 1. download or `git clone` to new-project-folder
